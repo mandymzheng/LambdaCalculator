@@ -1,5 +1,6 @@
-#Lambda Calculator
+# Lambda Calculator
 
+## Basic Function
 This program parses and evaluates untyped lambda expressions by using alpha and beta substitution to reduce the lambda expression to its simplest form. 
 
 All interaction with the user is performed in the command line, including inputting the expression and displaying the result of the lambda calculus 
@@ -21,6 +22,7 @@ Result:
 
 Above is an example of how the program would run if a valid lambda expression was given. The program first prints out the given expression in a formatted form, often adding more brackets to make the order of operations clear to the computer and the user. It then continues to print each step of the lambda calculus for the user to follow. 
 
+## Limitation
 A limitation of the program is that the input string must separate the lambda variables, or the following error will appear: 
 cswk-program-exe: "<stdin>" (line 1, column 6):
 unexpected '\\'
@@ -28,6 +30,7 @@ expecting end of "."
 
 This is due to the method that the program parses lambda variables, and if they are not separated the second lambda variable would not be parsed. 
 
+## Alpha and Beta Substitution
 The program is also able to perform alpha substitution when needed, this is when the lambda variable has the same name as the free variable. For example, (((\x.(\y.(y x)))y) (\z.z)). Here the free variable y is the same as \y.(y x) and this can be confusing when y is beta-substituted into \x.(\y.y x) as it will result in \y.y y. It is ambiguous which is the original y that needs to be substituted and which was the free variable. Therefore, alpha substitution is needed to distinguish between the two. 
 
 Enter an untyped λ expression:
