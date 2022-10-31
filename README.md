@@ -27,9 +27,12 @@ Above is an example of how the program would run if a valid lambda expression wa
 
 ## Limitation
 A limitation of the program is that the input string must separate the lambda variables, or the following error will appear: 
+
+```
 cswk-program-exe: "<stdin>" (line 1, column 6):
 unexpected '\\'
 expecting end of "."
+```
 
 This is due to the method that the program parses lambda variables, and if they are not separated the second lambda variable would not be parsed. 
 
