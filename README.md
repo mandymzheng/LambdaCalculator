@@ -1,4 +1,5 @@
-Lambda Calculator
+#Lambda Calculator
+
 This program parses and evaluates untyped lambda expressions by using alpha and beta substitution to reduce the lambda expression to its simplest form. 
 
 All interaction with the user is performed in the command line, including inputting the expression and displaying the result of the lambda calculus 
